@@ -20,4 +20,6 @@ celery
 motor
 pymongo
 prometheus-client
-
+pytest
+pytest-cov
+pytest-asyncio

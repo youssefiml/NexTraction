@@ -95,17 +95,6 @@ TOP_K_CHUNKS = 5
 CONFIDENCE_THRESHOLD = 0.7
 ```
 
-## Database
-
-MongoDB is used for storing jobs, pages, chunks, and query logs.
-
-```bash
-# .env
-MONGODB_URL=mongodb://localhost:27017
-MONGODB_DB_NAME=nextraction
-```
-
-For installation and setup, see [MONGODB_SETUP.md](../MONGODB_SETUP.md)
 
 ## Monitoring
 

@@ -58,6 +58,7 @@ def test_process_page():
     """Test full page processing."""
     processor = ContentProcessor()
     
+    # Need at least 50 words to pass the minimum content check
     page_data = {
         "url": "https://test.com",
         "title": "Test Page",
@@ -65,9 +66,12 @@ def test_process_page():
             <html>
                 <body>
                     <h1>Test Title</h1>
-                    <p>This is the first paragraph with some content.</p>
-                    <p>This is the second paragraph with more content.</p>
-                    <p>This is the third paragraph with even more content.</p>
+                    <p>This is the first paragraph with some content that provides useful information to readers.</p>
+                    <p>This is the second paragraph with more content that explains additional details about the topic.</p>
+                    <p>This is the third paragraph with even more content that continues the explanation further.</p>
+                    <p>This is the fourth paragraph with extra content to ensure we have enough words for processing.</p>
+                    <p>This is the fifth paragraph that adds more substance to the page content for testing purposes.</p>
+                    <p>Finally, this last paragraph ensures we have well over fifty words in total for the test.</p>
                 </body>
             </html>
         """,

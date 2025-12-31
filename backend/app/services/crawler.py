@@ -4,7 +4,7 @@ import asyncio
 from typing import List, Set, Optional, Dict
 from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timezone
 import logging
 import hashlib
 
@@ -92,7 +92,7 @@ class WebCrawler:
                             "html_content": html_content,
                             "links": links,
                             "content_hash": content_hash,
-                            "fetch_timestamp": datetime.utcnow().isoformat(),
+                            "fetch_timestamp": datetime.now(timezone.utc).isoformat(),
                             "status_code": response.status_code,
                         }
                     else:
